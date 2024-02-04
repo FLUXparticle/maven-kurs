@@ -1,8 +1,6 @@
-package com.example.web;
+package com.example.web.data;
 
-import java.io.*;
-
-public class PlusOperation implements Serializable {
+public class PlusOperation {
 
     private int left;
 

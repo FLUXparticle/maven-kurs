@@ -32,6 +32,7 @@
         <module>maven-kurs-ejb</module>
         <module>maven-kurs-web</module>
         <module>maven-kurs-ear</module>
+        <module>maven-kurs-common</module>
     </modules>
 
     <properties>
@@ -126,6 +127,12 @@
                 <artifactId>maven-kurs-ejb</artifactId>
                 <version>${project.version}</version>
                 <type>ejb</type>
+            </dependency>
+
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>maven-kurs-common</artifactId>
+                <version>${project.version}</version>
             </dependency>
 
             <!-- Define the version of the WAR so that we don't need to repeat

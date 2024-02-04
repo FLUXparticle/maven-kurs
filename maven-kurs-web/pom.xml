@@ -58,8 +58,7 @@
         <!-- Dependency on the EJB module so we can use it's services if needed -->
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>maven-kurs-ejb</artifactId>
-            <type>ejb</type>
+            <artifactId>maven-kurs-common</artifactId>
             <scope>provided</scope>
         </dependency>
 

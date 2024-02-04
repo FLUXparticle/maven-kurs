@@ -16,11 +16,15 @@
  */
 package com.example.ejb;
 
+import com.example.common.*;
+
 import javax.ejb.*;
 
 @Stateless
-public class CalculatorBean {
+@Remote(CalculatorBeanRemote.class)
+public class CalculatorBean implements CalculatorBeanRemote {
 
+    @Override
     public int add(int a, int b) {
         return a + b;
     }

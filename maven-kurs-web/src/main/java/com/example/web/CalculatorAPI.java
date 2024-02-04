@@ -16,7 +16,8 @@
  */
 package com.example.web;
 
-import com.example.ejb.*;
+import com.example.common.*;
+import com.example.web.data.*;
 
 import javax.ejb.*;
 import javax.ws.rs.*;
@@ -27,7 +28,7 @@ import javax.ws.rs.core.*;
 public class CalculatorAPI {
 
     @EJB
-    private CalculatorBean calculator;
+    private CalculatorBeanRemote calculator;
 
     @POST
     @Path("/plus")
