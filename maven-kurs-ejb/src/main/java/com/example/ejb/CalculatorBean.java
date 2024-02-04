@@ -14,27 +14,19 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.web;
-
-import com.example.ejb.*;
+package com.example.ejb;
 
 import javax.ejb.*;
-import javax.ws.rs.*;
-import javax.ws.rs.core.*;
 
 @Stateless
-@Path("/calculator")
-public class CalculatorAPI {
+public class CalculatorBean {
 
-    @EJB
-    private CalculatorBean calculator;
+    public int add(int a, int b) {
+        return a + b;
+    }
 
-    @POST
-    @Path("/plus")
-    @Consumes({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
-    @Produces(MediaType.TEXT_PLAIN)
-    public int execute(PlusOperation operation) {
-        return calculator.add(operation.getLeft(),  operation.getRight());
+    public int subtract(int a, int b) {
+        return a - b;
     }
 
 }
